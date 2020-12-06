@@ -15,42 +15,44 @@
 }
 /* swal */
 .swal-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.842);
 }
 .swal-modal {
-  background-color: rgb(0, 255, 21);
-  border: 3px solid rgb(255, 255, 255);
+  background-color: rgb(76, 215, 250);
+  border: 6px solid rgb(245, 245, 245)
 }
 .swal-title {
   margin: 0px;
   font-size: 18px;
   margin-bottom: 28px;
-  color: #000;
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
 }
 .swal-text{
-  color: black;
+  color: rgb(0, 0, 0);
+  height: 1px;
+  font-size: x-large;
 }
 .swal-footer {
-  background-color: rgb(245, 248, 250);
+  background-color: rgb(76, 215, 250);
   margin-top: 32px;
-  border-top: 1px solid #bac2c7;
+  border-top: 1px solid #2ec54f00;
   overflow: hidden;
   text-align: center;
 }
 .swal-button {
-  padding: 10px 19px;
-  border-radius: 5px;
-  font-size: 12px;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 18px;
   border: 1px solid #000000;
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-  color: rgb(255, 255, 255);
+  text-shadow: 0px -1px 0px rgba(131, 118, 118, 0);
+  color: rgb(0, 0, 0);
 }
 .swal-button--reiniciar{
   background-color: #ff411f,
 }
 .swal-button--home {
-  background-color: rgba(81, 252, 38, 0.952);
+  background-color: rgba(185, 36, 36, 0.931);
 }
 /*fondos*/
 .fondo1{
@@ -107,10 +109,10 @@ img.card-img-top.girar {
   padding: 10px;
   text-align: center;
   margin: auto;
-  color: white;
+  color: rgb(255, 255, 255);
   letter-spacing: 1px;
   transition: all 300ms;
-  border-color: white;
+  border-color: rgb(255, 255, 255);
   border-width: 2px;
   border-style: solid;
   font-family: 'Arial Black';
