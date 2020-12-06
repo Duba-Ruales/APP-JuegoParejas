@@ -73,7 +73,43 @@ export default {
             this.ciclo = (this.alto*this.COLUMNAS)
             //URL DE FRUTAS
             this.frutas = [
-                ""
+                "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999__340.png",
+                "https://cdn.pixabay.com/photo/2018/07/22/18/38/grapes-3555214__340.jpg",
+                "https://cdn.pixabay.com/photo/2012/02/26/10/59/apple-17092__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/04/07/16/52/fruit-3298948__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/09/16/13/22/apples-3681500_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2019/01/08/16/26/fruit-3921531_960_720.jpg",
+                 "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999__340.png",
+                "https://cdn.pixabay.com/photo/2018/07/22/18/38/grapes-3555214__340.jpg",
+                "https://cdn.pixabay.com/photo/2012/02/26/10/59/apple-17092__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/04/07/16/52/fruit-3298948__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/09/16/13/22/apples-3681500_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2019/01/08/16/26/fruit-3921531_960_720.jpg",
+                 "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999__340.png",
+                "https://cdn.pixabay.com/photo/2018/07/22/18/38/grapes-3555214__340.jpg",
+                "https://cdn.pixabay.com/photo/2012/02/26/10/59/apple-17092__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/04/07/16/52/fruit-3298948__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/09/16/13/22/apples-3681500_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2019/01/08/16/26/fruit-3921531_960_720.jpg",
+                 "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999__340.png",
+                "https://cdn.pixabay.com/photo/2018/07/22/18/38/grapes-3555214__340.jpg",
+                "https://cdn.pixabay.com/photo/2012/02/26/10/59/apple-17092__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/04/07/16/52/fruit-3298948__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/09/16/13/22/apples-3681500_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2019/01/08/16/26/fruit-3921531_960_720.jpg",
+                 "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999__340.png",
+                "https://cdn.pixabay.com/photo/2019/07/22/10/53/blackberries-4354808_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2012/02/26/10/59/apple-17092__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/04/07/16/52/fruit-3298948__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/09/16/13/22/apples-3681500_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2019/01/08/16/26/fruit-3921531_960_720.jpg",
+                 "https://cdn.pixabay.com/photo/2017/01/20/15/06/orange-1995056_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2018/07/22/18/38/grapes-3555214__340.jpg",
+                "https://cdn.pixabay.com/photo/2012/02/26/10/59/apple-17092__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/04/07/16/52/fruit-3298948__340.jpg",
+                "https://cdn.pixabay.com/photo/2018/09/16/13/22/apples-3681500_960_720.jpg",
+                "https://cdn.pixabay.com/photo/2019/01/08/16/26/fruit-3921531_960_720.jpg"
+
             ]
 
             //URL DE INSTRUMENTOS
