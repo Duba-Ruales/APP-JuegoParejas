@@ -1,11 +1,12 @@
 <template>
-  <div class="prueba">
+  <div class="prueba fondo2">
     <div class="col-12">
-      <h1 class="text-context">JUEGO</h1>
+      <h1 class="text-context">MEMORY MATCH</h1>
       <p>
         <button class="btton-pause" @click="pause()">
           <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
         </button>
+
         <span class="h5"> Intentos: </span>{{ intentos }}
         <span class="h5">Aciertos: </span>{{ aciertos }}
         <span class="h5">Tiempo: </span><span id="minutos"></span> :
@@ -13,6 +14,7 @@
       </p>
     </div>
   </div>
+
   <div v-for="(fila, indiceFila) in memorama" :key="indiceFila" class="row">
     <div
       :key="indiceFila + '' + indiceImagen"
@@ -29,7 +31,6 @@
       </div>
     </div>
   </div>
-  <img src="../assets/musica/13.jpg" alt="" />-->
 </template>
 
 <script>

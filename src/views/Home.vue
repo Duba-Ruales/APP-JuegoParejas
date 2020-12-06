@@ -1,7 +1,7 @@
 <template>
 <div class="padre fondo1">
   <div class="bloque">
-    <button class="bttn bttn-inicio fondo2" type="submit" @click="siguiente()">jugar</button>
+    <button class="bttn bttn-inicio fondo2" type="submit" @click="siguiente()">JUGAR AHORA </button>
   </div>
 </div>
   <!--<a href="/Categorias" class="button">jugar</a>-->
