@@ -6,13 +6,12 @@
         <button class="btton-pause" @click="pause()">
           <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
         </button>
-      </p>
 
-      <div>holla</div>
-      <span class="h5"> Intentos: </span>{{ intentos }}
-      <span class="h5">Aciertos: </span>{{ aciertos }}
-      <span class="h5">Tiempo: </span><span id="minutos"></span> :
-      <span id="segundos"></span>
+        <span class="h5"> Intentos: </span>{{ intentos }}
+        <span class="h5">Aciertos: </span>{{ aciertos }}
+        <span class="h5">Tiempo: </span><span id="minutos"></span> :
+        <span id="segundos"></span>
+      </p>
     </div>
   </div>
   <div v-for="(fila, indiceFila) in memorama" :key="indiceFila" class="row">
@@ -31,7 +30,7 @@
       </div>
     </div>
   </div>
-<!--   <img src="../assets/musica/13.jpg" alt="" /> -->
+  <img src="../assets/musica/13.jpg" alt="" />
 </template>
 
 <script>
@@ -85,6 +84,7 @@ export default {
       this.ciclo = this.alto * this.COLUMNAS;
       //URL DE FRUTAS
       this.frutas = [
+
         "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999__340.png",
         "https://cdn.pixabay.com/photo/2018/07/22/18/38/grapes-3555214__340.jpg",
         "https://cdn.pixabay.com/photo/2012/02/26/10/59/apple-17092__340.jpg",
@@ -124,12 +124,87 @@ export default {
       ];
 
       //URL DE INSTRUMENTOS
-      this.musica = [""];
+      this.musica = [
+          "https://cdn.pixabay.com/photo/2014/10/13/17/49/acoustic-guitar-487035__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/10/04/18/39/cello-2817159__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/06/04/17/53/piano-362251__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/05/01/18/18/guitar-2276181__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/19/21/55/guitar-2963955__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/01/17/09/57/drums-246840__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/07/00/18/guitar-2925274__340.jpg",
+          "https://cdn.pixabay.com/photo/2010/12/13/10/01/guitar-2119__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/06/04/17/53/piano-362251__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/05/01/18/18/guitar-2276181__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/19/21/55/guitar-2963955__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/01/17/09/57/drums-246840__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/07/00/18/guitar-2925274__340.jpg",
+          "https://cdn.pixabay.com/photo/2010/12/13/10/01/guitar-2119__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/06/04/17/53/piano-362251__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/05/01/18/18/guitar-2276181__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/19/21/55/guitar-2963955__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/01/17/09/57/drums-246840__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/07/00/18/guitar-2925274__340.jpg",
+          "https://cdn.pixabay.com/photo/2010/12/13/10/01/guitar-2119__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/06/04/17/53/piano-362251__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/05/01/18/18/guitar-2276181__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/19/21/55/guitar-2963955__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/01/17/09/57/drums-246840__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/07/00/18/guitar-2925274__340.jpg",
+          "https://cdn.pixabay.com/photo/2010/12/13/10/01/guitar-2119__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/06/04/17/53/piano-362251__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/05/01/18/18/guitar-2276181__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/19/21/55/guitar-2963955__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/01/17/09/57/drums-246840__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/07/00/18/guitar-2925274__340.jpg",
+          "https://cdn.pixabay.com/photo/2010/12/13/10/01/guitar-2119__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/06/04/17/53/piano-362251__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/05/01/18/18/guitar-2276181__340.jpg",
+          "https://cdn.pixabay.com/photo/2017/11/19/21/55/guitar-2963955__340.jpg",
+          "https://cdn.pixabay.com/photo/2014/01/17/09/57/drums-246840__340.jpg",
+
+          ];
 
       //URL DE ANIMALES
       this.animales = [
         //locales
-        "",
+        "https://cdn.pixabay.com/photo/2018/08/12/16/59/ara-3601194__340.jpg",
+        "https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/05/31/18/38/sea-2361247__340.jpg",
+        "https://cdn.pixabay.com/photo/2013/11/01/11/13/dolphin-203875__340.jpg",
+        "https://cdn.pixabay.com/photo/2015/04/10/01/41/fox-715588__340.jpg",
+        "https://cdn.pixabay.com/photo/2014/11/03/17/40/leopard-515509__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/10/20/10/58/elephant-2870777__340.jpg",
+        "https://cdn.pixabay.com/photo/2013/06/29/21/18/wolf-142173__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374__340.jpg",
+        "https://cdn.pixabay.com/photo/2018/08/12/16/59/ara-3601194__340.jpg",
+        "https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/05/31/18/38/sea-2361247__340.jpg",
+        "https://cdn.pixabay.com/photo/2013/11/01/11/13/dolphin-203875__340.jpg",
+        "https://cdn.pixabay.com/photo/2015/04/10/01/41/fox-715588__340.jpg",
+        "https://cdn.pixabay.com/photo/2014/11/03/17/40/leopard-515509__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/10/20/10/58/elephant-2870777__340.jpg",
+        "https://cdn.pixabay.com/photo/2013/06/29/21/18/wolf-142173__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374__340.jpg",
+        "https://cdn.pixabay.com/photo/2018/08/12/16/59/ara-3601194__340.jpg",
+        "https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/05/31/18/38/sea-2361247__340.jpg",
+        "https://cdn.pixabay.com/photo/2013/11/01/11/13/dolphin-203875__340.jpg",
+        "https://cdn.pixabay.com/photo/2015/04/10/01/41/fox-715588__340.jpg",
+        "https://cdn.pixabay.com/photo/2014/11/03/17/40/leopard-515509__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/10/20/10/58/elephant-2870777__340.jpg",
+        "https://cdn.pixabay.com/photo/2013/06/29/21/18/wolf-142173__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/06/09/09/39/adler-2386314__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374__340.jpg",
+
+
       ];
 
       switch (this.categoria) {
