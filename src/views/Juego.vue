@@ -6,12 +6,13 @@
         <button class="btton-pause" @click="pause()">
           <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
         </button>
-
-        <span class="h5"> Intentos: </span>{{ intentos }}
-        <span class="h5">Aciertos: </span>{{ aciertos }}
-        <span class="h5">Tiempo: </span><span id="minutos"></span> :
-        <span id="segundos"></span>
       </p>
+
+      <div>holla</div>
+      <span class="h5"> Intentos: </span>{{ intentos }}
+      <span class="h5">Aciertos: </span>{{ aciertos }}
+      <span class="h5">Tiempo: </span><span id="minutos"></span> :
+      <span id="segundos"></span>
     </div>
   </div>
 
