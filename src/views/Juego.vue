@@ -38,6 +38,7 @@
 import swal from "sweetalert";
 import React from "react";
 var cronometro;
+var ganador = "¡ FELICIDADES !";
 export default {
   name: "Juego",
   data() {
@@ -417,6 +418,7 @@ export default {
     pause() {
       clearInterval(cronometro);
       swal({
+        ganador,
         icon:
           "https://pauseonline.s3.eu-west-2.amazonaws.com/wp-content/uploads/2019/11/01131317/Pause-Logo.png",
 
@@ -424,10 +426,10 @@ export default {
 
         buttons: {
           reanudar: {
-            text: "Reanudar",
+            text: "REANUDAR",
           },
           home: {
-            text: "salir",
+            text: "SALIR",
           },
         },
         closeOnClickOutside: false,
