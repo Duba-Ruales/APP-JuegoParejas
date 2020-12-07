@@ -12,11 +12,14 @@
 }
 .prueba{
   text-align: center;
+  color: rgb(255, 255, 255);
 }
 /* swal */
 .swal-overlay {
   background-color: rgba(0, 0, 0, 0.842);
 }
+
+/* Alerte de pausa lado de arriba */
 .swal-modal {
   background-color: rgb(76, 215, 250);
   border: 6px solid rgb(245, 245, 245)
@@ -25,14 +28,18 @@
   margin: 0px;
   font-size: 18px;
   margin-bottom: 28px;
-  color: rgb(0, 0, 0);
+  color: rgb(5, 5, 5);
   text-transform: uppercase;
 }
+
+/* Texto de aciertos en pausa */
 .swal-text{
   color: rgb(0, 0, 0);
   height: 1px;
   font-size: x-large;
 }
+
+/* Alerta de pausa  lado de abajo */
 .swal-footer {
   background-color: rgb(76, 215, 250);
   margin-top: 32px;
@@ -40,6 +47,7 @@
   overflow: hidden;
   text-align: center;
 }
+/* Botones de Reanudar y salir */
 .swal-button {
   padding: 10px 15px;
   border-radius: 3px;
@@ -48,20 +56,21 @@
   text-shadow: 0px -1px 0px rgba(131, 118, 118, 0);
   color: rgb(0, 0, 0);
 }
-.swal-button--reiniciar{
+.swal-button--reiniciar {
   background-color: #ff411f,
 }
 .swal-button--home {
   background-color: rgba(185, 36, 36, 0.931);
 }
-/*fondos*/
+/*fondos de las vistas*/
 .fondo1{
   background: url('assets/fondo/fondo1.jpg');
 }
 .fondo2{
   background: url('assets/fondo/fondo2.jpg');
 }
-/*centrado*/
+
+/*centrado vertical de categorias*/
 .padre{
   background-size: 135%;
   text-align: center;
@@ -69,27 +78,32 @@
   height: 100vh;
   display: table;
 }
-.bloque{
+
+/* posision de las categorias en la vista */
+.bloque {
   display: table-cell;
   vertical-align: middle;
 }
-.bloques{
+
+/* Alineacion de las categorias 3 filas */
+.bloques {
   width: 50%;
   padding: 3px 3px 3px 5px;
-
   display: inline-block;
 }
-/* imagen */
+
+/* Lasimagenes en el juego */
 .target-image{
   padding: auto;
-  width: 100%;
+  width: 114%;
   height: auto;
-  height: 25vh;
-  border-radius: 10px;
-  border-style: solid;
+  height: auto;
+  border-radius: 7px;
+  /* border-style: solid; */
   border-width: 1px;
   border-color: black;
 }
+
 img.card-img-top.girar {
     animation: fadein 2s;
 }
@@ -106,11 +120,11 @@ img.card-img-top.girar {
 .bttn{
   background-size: 100%;
   display: block;
-  padding: 10px;
+  padding: 6px;
   text-align: center;
   margin: auto;
   color: rgb(255, 255, 255);
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   transition: all 300ms;
   border-color: rgb(255, 255, 255);
   border-width: 2px;
@@ -119,6 +133,20 @@ img.card-img-top.girar {
   text-shadow: black -2px 2px;
   border-bottom: 6px solid #000;
 }
+
+.bttn2{
+  background-size: 100%;
+  display: block;
+  padding: 6px;
+  text-align: center;
+  margin: auto;
+  color: rgb(255, 255, 255);
+  border-color: rgb(255, 255, 255);
+  border-width: 2px;
+  text-shadow: black -2px 2px;
+  /* border-bottom: 6px solid #000; */
+}
+
 .img-btn{
   width: 15px;
   height: 15px;
@@ -126,7 +154,7 @@ img.card-img-top.girar {
 .btton-pause{
   vertical-align: middle;
   border-radius: 5px;
-  border-color: rgb(0, 0, 0);
+  border-color: rgb(22, 22, 22);
   border-width: 2px;
   border-style: solid;
   padding: 3px 7px;

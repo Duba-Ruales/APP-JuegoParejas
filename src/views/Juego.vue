@@ -1,7 +1,8 @@
 <template>
+<div class=" bttn2 padre fondo1">
   <div class="prueba fondo2">
     <div class="col-12">
-      <h1 class="text-context">MEMORY MATCH</h1>
+      <h2 class="text-context ">MEMORY MATCH</h2>
       <p>
         <button class="btton-pause" @click="pause()">
           <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
@@ -20,7 +21,7 @@
       class="col"
       v-for="(imagen, indiceImagen) in fila"
     >
-      <div class="mb-3 prueba">
+      <div class="mb-3 prueba ">
         <img
           @click="voltear(indiceFila, indiceImagen)"
           :class="{ girar: imagen.mostrar }"
@@ -29,6 +30,7 @@
         />
       </div>
     </div>
+  </div>
   </div>
 </template>
 
