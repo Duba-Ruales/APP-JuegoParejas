@@ -1,7 +1,7 @@
 <template>
   <div class="prueba fondo2 ">
     <div class="col-12 ">
-      <h1 class="text-context">MEMORY MATCH</h1>
+      <h2 class="text-context">MEMORY MATCH</h2>
       <p>
         <button class="btton-pause" @click="pause()">
           <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
@@ -410,9 +410,10 @@ export default {
         (this.min = 0),
         (this.seg = 0),
         swal({
-          icon: "https://www.flaticon.es/svg/static/icons/svg/1986/1986987.svg",
+            /* text:"sss", */
+          icon: "https://runfrictionless.com/wp-content/uploads/2018/10/trophy-200px.gif",
           title: "Intentos: " + this.intentos,
-          text: "Tiempo" + this.min + ":" + this.seg,
+          text: "Tiempo: " + this.min + ":" + this.seg,
           buttons: {
             reiniciar: {
               text: "Reiniciar",
@@ -423,6 +424,8 @@ export default {
           },
           closeOnClickOutside: false,
           allowOutsideClick: false,
+
+          
         }).then((value) => {
           switch (value) {
             case "reiniciar":
