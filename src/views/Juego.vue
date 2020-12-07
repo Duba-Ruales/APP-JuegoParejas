@@ -20,7 +20,7 @@
       class="col"
       v-for="(imagen, indiceImagen) in fila"
     >
-      <div class="mb-3 prueba">
+      <div class="mb-1 prueba">
         <img
           @click="voltear(indiceFila, indiceImagen)"
           :class="{ girar: imagen.mostrar }"
@@ -47,7 +47,7 @@ export default {
       vehiculos: [],
       animales: [],
       logos: [],
-      COLUMNAS: 0,
+      columnas: 0,
       alto: 0,
       ciclo: 0,
       intentos: 0,
@@ -60,11 +60,7 @@ export default {
         indiceFila: null,
         indiceImagen: null,
       },
-      intentos: 0,
-      aciertos: 0,
       esperandoTimeout: false,
-      probar: [],
-
       horas: 0,
       min: 0,
       seg: 0,
@@ -79,9 +75,9 @@ export default {
     } else {
       let a;
       (this.categoria = localStorage.getItem("categoria")),
-        (this.COLUMNAS = parseInt(localStorage.getItem("ancho")));
+        (this.columnas = parseInt(localStorage.getItem("ancho")));
       this.alto = parseInt(localStorage.getItem("alto"));
-      this.ciclo = this.alto * this.COLUMNAS;
+      this.ciclo = this.alto * this.columnas;
       this.frutas = [
         "https://cdn.pixabay.com/photo/2017/07/20/02/14/grapes-2520999__340.png",
         "https://cdn.pixabay.com/photo/2018/07/22/18/38/grapes-3555214__340.jpg",
@@ -259,25 +255,25 @@ export default {
   methods: {
     tiempo() {
       var self = this;
-      let contador_s = this.seg;
-      let contador_m = this.min;
-      let contador_h = 0;
-      let s = document.getElementById("segundos");
-      let m = document.getElementById("minutos");
-      (m.innerHTML = contador_m),
-        (s.innerHTML = contador_s),
+      let st = this.seg;
+      let mt = this.min;
+      let ht = 0;
+      let segundo = document.getElementById("segundos");
+      let minuto = document.getElementById("minutos");
+      (minuto.innerHTML = mt),
+        (segundo.innerHTML = st),
         (cronometro = setInterval(function () {
-          if (contador_s === 60) {
-            contador_m++;
-            contador_s = 0;
-            m.innerHTML = contador_m;
-            if (contador_m === 60) {
-              contador_m = 0;
-              contador_h++;
+          if (st === 60) {
+            mt++;
+            st = 0;
+            //MSInputMethodContext.innerHTML = mt;
+            if (mt === 60) {
+              mt = 0;
+              ht++;
             }
           }
-          contador_s++;
-          s.innerHTML = contador_s;
+          st++;
+          segundo.innerHTML = st;
           self.guardartiempo();
         }, 1000));
     },
@@ -315,8 +311,8 @@ export default {
 
       // Dividirlo en subarreglos o columnas
       let memoramaDividido = [];
-      for (let i = 0; i < this.ciclo; i += this.COLUMNAS) {
-        memoramaDividido.push(memorama.slice(i, i + this.COLUMNAS));
+      for (let i = 0; i < this.ciclo; i += this.columnas) {
+        memoramaDividido.push(memorama.slice(i, i + this.columnas));
       }
       // Reiniciar intentos
       this.intentos = 0;
@@ -415,14 +411,15 @@ export default {
       );
     },
 
-    //juego en pausa
+    //juego en pausas
     pause() {
       clearInterval(cronometro);
       swal({
         icon:
           "https://pauseonline.s3.eu-west-2.amazonaws.com/wp-content/uploads/2019/11/01131317/Pause-Logo.png",
 
-        text: "ACIERTOS: " + this.aciertos + " / " + this.ciclos / 2,
+        text: "ACIERTOS: " + this.aciertos,
+
         buttons: {
           reanudar: {
             text: "Reanudar",
@@ -448,34 +445,31 @@ export default {
     // Mostrar alerta de victoria y reiniciar juego
     indicarVictoria() {
       clearInterval(cronometro);
-      (this.horas = 0),
-        (this.min = 0),
-        (this.seg = 0),
-        swal({
-          icon: "https://www.flaticon.es/svg/static/icons/svg/1986/1986987.svg",
-          title: "Intentos: " + this.intentos,
-          text: "Tiempo" + this.min + ":" + this.seg,
-          buttons: {
-            reiniciar: {
-              text: "Reiniciar",
-            },
-            home: {
-              text: "Salir",
-            },
+      swal({
+        icon: "https://www.flaticon.es/svg/static/icons/svg/1986/1986987.svg",
+        title: "Intentos: " + this.intentos,
+        text: "Tiempo  " + this.min + ":" + this.seg,
+        buttons: {
+          reiniciar: {
+            text: "Reiniciar",
           },
-          closeOnClickOutside: false,
-          allowOutsideClick: false,
-        }).then((value) => {
-          switch (value) {
-            case "reiniciar":
-              this.tiempo();
-              this.reiniciarJuego();
-              break;
-            case "home":
-              this.$router.push("/Categorias");
-              break;
-          }
-        });
+          home: {
+            text: "Salir",
+          },
+        },
+        closeOnClickOutside: false,
+        allowOutsideClick: false,
+      }).then((value) => {
+        switch (value) {
+          case "reiniciar":
+            this.tiempo();
+            this.reiniciarJuego();
+            break;
+          case "home":
+            this.$router.push("/Categorias");
+            break;
+        }
+      });
     },
 
     mezclarArreglo(a) {
