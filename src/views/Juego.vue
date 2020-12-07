@@ -1,32 +1,34 @@
 <template>
-  <div class="prueba fondo2">
-    <div class="col-12">
-      <h1 class="text-context">MEMORY MATCH</h1>
-      <p>
-        <button class="btton-pause" @click="pause()">
-          <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
-        </button>
+  <div class="bttn2 padre fondo1">
+    <div class="prueba fondo2">
+      <div class="col-12">
+        <h2 class="text-context">MEMORY MATCH</h2>
+        <p>
+          <button class="btton-pause" @click="pause()">
+            <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
+          </button>
 
-        <span class="h5"> Intentos: </span>{{ intentos }}
-        <span class="h5">Aciertos: </span>{{ aciertos }}
-        <span class="h5">Tiempo: </span><span id="minutos"></span> :
-        <span id="segundos"></span>
-      </p>
+          <span class="h5"> Intentos: </span>{{ intentos }}
+          <span class="h5">Aciertos: </span>{{ aciertos }}
+          <span class="h5">Tiempo: </span><span id="minutos"></span> :
+          <span id="segundos"></span>
+        </p>
+      </div>
     </div>
-  </div>
-  <div v-for="(fila, indiceFila) in memorama" :key="indiceFila" class="row">
-    <div
-      :key="indiceFila + '' + indiceImagen"
-      class="col"
-      v-for="(imagen, indiceImagen) in fila"
-    >
-      <div class="mb-1 prueba">
-        <img
-          @click="voltear(indiceFila, indiceImagen)"
-          :class="{ girar: imagen.mostrar }"
-          :src="imagen.mostrar ? imagen.ruta : NOMBRE_IMAGEN_OCULTA"
-          class="target-image"
-        />
+    <div v-for="(fila, indiceFila) in memorama" :key="indiceFila" class="row">
+      <div
+        :key="indiceFila + '' + indiceImagen"
+        class="col"
+        v-for="(imagen, indiceImagen) in fila"
+      >
+        <div class="mb-1 prueba">
+          <img
+            @click="voltear(indiceFila, indiceImagen)"
+            :class="{ girar: imagen.mostrar }"
+            :src="imagen.mostrar ? imagen.ruta : NOMBRE_IMAGEN_OCULTA"
+            class="target-image"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -266,7 +268,7 @@ export default {
           if (st === 60) {
             mt++;
             st = 0;
-            //MSInputMethodContext.innerHTML = mt;
+            MSInputMethodContext.innerHTML = mt;
             if (mt === 60) {
               mt = 0;
               ht++;

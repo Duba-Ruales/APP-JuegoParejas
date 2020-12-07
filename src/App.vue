@@ -51,6 +51,8 @@
 .swal-overlay {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* Alerte de pausa lado de arriba */
 .swal-modal {
   background-color: rgb(0, 255, 21);
   border: 3px solid rgb(255, 255, 255);
@@ -69,6 +71,8 @@
 .swal-text {
   color: black;
 }
+
+/* Alerta de pausa  lado de abajo */
 .swal-footer {
   background-color: rgb(245, 248, 250);
   margin-top: 32px;
@@ -76,6 +80,7 @@
   overflow: hidden;
   text-align: center;
 }
+/* Botones de Reanudar y salir */
 .swal-button {
   padding: 10px 19px;
   border-radius: 5px;
@@ -118,7 +123,6 @@
 .bloques {
   width: 50%;
   padding: 3px 3px 3px 5px;
-
   display: inline-block;
 }
 /* sin pading */
@@ -131,6 +135,7 @@
   max-height: 300px;
   border-radius: 10px;
 }
+
 img.card-img-top.girar {
   animation: fadein 2s;
 }
@@ -147,7 +152,7 @@ img.card-img-top.girar {
 .bttn {
   background-size: 100%;
   display: block;
-  padding: 10px;
+  padding: 6px;
   text-align: center;
   margin: auto;
   color: white;
