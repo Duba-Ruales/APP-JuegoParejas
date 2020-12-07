@@ -61,8 +61,8 @@
         >
           <h5>
             <img
-              src="https://image.flaticon.com/icons/png/512/513/513885.png"
-              width="42"
+              src="https://cdn.pixabay.com/photo/2016/12/31/01/43/auto-1941990_960_720.png"
+              width="50"
             />
             VEÍCULOS
           </h5>

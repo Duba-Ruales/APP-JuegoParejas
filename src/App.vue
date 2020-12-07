@@ -60,7 +60,7 @@
   background-color: #ff411f,
 }
 .swal-button--home {
-  background-color: rgba(185, 36, 36, 0.931);
+  background-color: rgba(206, 22, 22, 0.931);
 }
 /*fondos de las vistas*/
 .fondo1{
@@ -94,13 +94,13 @@
 
 /* Lasimagenes en el juego */
 .target-image{
-  padding: auto;
+  /* padding: 3px; */
   width: 114%;
   height: auto;
-  height: auto;
-  border-radius: 7px;
-  /* border-style: solid; */
-  border-width: 1px;
+  border-radius: 5px;
+  border-style: solid;
+/* border-spacing: 0; */
+  border-width: 0px;
   border-color: black;
 }
 
@@ -129,7 +129,7 @@ img.card-img-top.girar {
   border-color: rgb(255, 255, 255);
   border-width: 2px;
   border-style: solid;
-  font-family: 'Arial Black';
+  /* font-family: 'Arial Black'; */
   text-shadow: black -2px 2px;
   border-bottom: 6px solid #000;
 }

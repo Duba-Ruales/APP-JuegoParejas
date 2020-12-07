@@ -32,12 +32,14 @@
     </div>
   </div>
   </div>
+  ganador:
 </template>
 
 <script>
 import swal from "sweetalert";
 import React from "react";
 var cronometro;
+var ganador="¡ FELICIDADES !";
 export default {
   name: "Juego",
   data() {
@@ -421,16 +423,18 @@ export default {
     pause() {
       clearInterval(cronometro);
       swal({
+        ganador,
         icon:
           "https://pauseonline.s3.eu-west-2.amazonaws.com/wp-content/uploads/2019/11/01131317/Pause-Logo.png",
 
-        text: "ACIERTOS: " + this.aciertos + " / " + this.ciclos / 2,
+/* + this.ciclos / 2 */
+        text: "ACIERTOS: "+" [ " + this.aciertos + " ] " ,
         buttons: {
           reanudar: {
-            text: "Reanudar",
+            text: "REANUDAR",
           },
           home: {
-            text: "salir",
+            text: "SALIR",
           },
         },
         closeOnClickOutside: false,
@@ -454,16 +458,17 @@ export default {
         (this.min = 0),
         (this.seg = 0),
         swal({
-            /* text:"sss", */
+  
           icon: "https://runfrictionless.com/wp-content/uploads/2018/10/trophy-200px.gif",
-          title: "Intentos: " + this.intentos,
-          text: "Tiempo: " + this.min + ":" + this.seg,
+          title: "Intentos Erroneos: "+"[ " + this.intentos+" ]",
+          /*  + this.min + ":" + this.seg */
+          text: "¡ BUEN TRABAJO ! ",
           buttons: {
             reiniciar: {
-              text: "Reiniciar",
+              text: "REINICIAR",
             },
             home: {
-              text: "Salir",
+              text: "SALIR",
             },
           },
           closeOnClickOutside: false,
