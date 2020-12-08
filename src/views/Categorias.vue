@@ -69,9 +69,13 @@
         </button>
       </div>
 
-      <!-- v-on:click="cat='marcas'" @click="siguiente()" -->
       <div class="bloques">
-        <button class="bttn bttn-cat fondo1" type="submit">
+        <button
+          class="bttn bttn-cat fondo1"
+          type="submit"
+          v-on:click="cat = 'logos'"
+          @click="siguiente()"
+        >
           <h5>
             <img
               src="https://n-bici.com/wp-content/uploads/2016/05/cropped-favicon.png"
@@ -82,9 +86,13 @@
         </button>
       </div>
 
-      <!-- v-on:click="cat='NO'" @click="siguiente()" -->
       <div class="bloques">
-        <button class="bttn bttn-cat fondo1" type="submit">
+        <button
+          class="bttn bttn-cat fondo1"
+          type="submit"
+          v-on:click="cat = 'dibujos'"
+          @click="siguiente()"
+        >
           <h5>
             <img
               src="https://www.defensorianinez.cl/wp-content/uploads/2018/08/favicon.png"

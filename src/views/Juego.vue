@@ -50,6 +50,7 @@ export default {
       vehiculos: [],
       animales: [],
       logos: [],
+      dibujos: [],
       columnas: 0,
       alto: 0,
       ciclo: 0,
@@ -235,7 +236,82 @@ export default {
         "https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg",
         "https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374__340.jpg",
       ];
-      this.logos = [""];
+      this.logos = [
+        "https://cdn.pixabay.com/photo/2014/04/02/10/56/recycling-304974__340.png",
+        "https://cdn.pixabay.com/photo/2016/11/09/08/58/wordpress-1810632__340.jpg",
+        "https://cdn.pixabay.com/photo/2013/07/13/11/34/wifi-158401__340.png",
+        "https://cdn.pixabay.com/photo/2016/04/24/14/34/youtube-1349699__340.png",
+        "https://cdn.pixabay.com/photo/2015/04/08/04/41/the-chinese-dragon-712149_",
+        "https://cdn.pixabay.com/photo/2014/04/03/00/43/lion-309219__340.png",
+        " https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309__340.png",
+        "https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908__340.png",
+        "https://cdn.pixabay.com/photo/2016/01/26/17/15/gmail-1162901__340.png",
+        "https://cdn.pixabay.com/photo/2016/11/04/14/13/google-maps-1797882__340.png",
+        "https://cdn.pixabay.com/photo/2017/01/16/17/05/whatsapp-1984584__340.png",
+        "https://cdn.pixabay.com/photo/2016/08/15/18/18/bmw-1596080__340.png",
+        "https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307__340.png",
+        "https://cdn.pixabay.com/photo/2018/08/30/16/57/coffee-3642712__340.png",
+        "https://cdn.pixabay.com/photo/2015/09/15/21/26/cat-941821__340.png",
+        "https://cdn.pixabay.com/photo/2014/04/02/10/16/firefox-303322__340.png",
+        "https://cdn.pixabay.com/photo/2016/12/23/07/00/game-1926905__340.png",
+        "https://cdn.pixabay.com/photo/2014/04/02/10/56/recycling-304974__340.png",
+        "https://cdn.pixabay.com/photo/2016/11/09/08/58/wordpress-1810632__340.jpg",
+        "https://cdn.pixabay.com/photo/2013/07/13/11/34/wifi-158401__340.png",
+        "https://cdn.pixabay.com/photo/2016/04/24/14/34/youtube-1349699__340.png",
+        "https://cdn.pixabay.com/photo/2015/04/08/04/41/the-chinese-dragon-712149_",
+        "https://cdn.pixabay.com/photo/2014/04/03/00/43/lion-309219__340.png",
+        " https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309__340.png",
+        "https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg",
+        "https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908__340.png",
+        "https://cdn.pixabay.com/photo/2016/01/26/17/15/gmail-1162901__340.png",
+        "https://cdn.pixabay.com/photo/2016/11/04/14/13/google-maps-1797882__340.png",
+        "https://cdn.pixabay.com/photo/2017/01/16/17/05/whatsapp-1984584__340.png",
+        "https://cdn.pixabay.com/photo/2016/08/15/18/18/bmw-1596080__340.png",
+        "https://cdn.pixabay.com/photo/2015/08/27/11/20/bitcoin-910307__340.png",
+        "https://cdn.pixabay.com/photo/2018/08/30/16/57/coffee-3642712__340.png",
+        "https://cdn.pixabay.com/photo/2015/09/15/21/26/cat-941821__340.png",
+        "https://cdn.pixabay.com/photo/2014/04/02/10/16/firefox-303322__340.png",
+        "https://cdn.pixabay.com/photo/2016/12/23/07/00/game-1926905__340.png",
+      ];
+      this.dibujos = [
+        "https://cdn.pixabay.com/photo/2018/03/31/03/46/kitten-3277268__340.png",
+        "https://cdn.pixabay.com/photo/2017/01/31/20/53/robot-2027195__340.png",
+        "https://cdn.pixabay.com/photo/2016/11/01/18/41/alien-1789184__340.png",
+        "https://cdn.pixabay.com/photo/2020/01/30/08/00/caricature-4804615__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/03/29/12/52/bear-2185131__340.png",
+        "https://cdn.pixabay.com/photo/2018/02/02/00/32/robot-3124412__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/09/14/11/36/doctor-2748707__340.png",
+        "https://cdn.pixabay.com/photo/2017/03/19/00/48/dog-2155329__340.png",
+        "https://cdn.pixabay.com/photo/2018/02/12/22/19/ice-cream-3149270__340.jpg",
+        "https://cdn.pixabay.com/photo/2018/03/12/00/13/caricature-3218433__340.png",
+        "https://cdn.pixabay.com/photo/2018/02/27/13/27/bima-3185441__340.png",
+        "https://cdn.pixabay.com/photo/2020/01/30/07/57/caricature-4804606__340.jpg",
+        "https://cdn.pixabay.com/photo/2019/07/15/01/15/fish-4338388__340.png",
+        "https://cdn.pixabay.com/photo/2019/07/15/01/15/fish-4338388__340.png",
+        "https://cdn.pixabay.com/photo/2015/08/02/23/32/african-872377__340.png",
+        "https://cdn.pixabay.com/photo/2020/01/30/07/58/caricature-4804608__340.jpg",
+        "https://cdn.pixabay.com/photo/2018/08/23/23/15/einstein-3626977__340.png",
+        "https://cdn.pixabay.com/photo/2016/03/31/20/40/annoying-1295960__340.png",
+        "https://cdn.pixabay.com/photo/2018/03/31/03/46/kitten-3277268__340.png",
+        "https://cdn.pixabay.com/photo/2017/01/31/20/53/robot-2027195__340.png",
+        "https://cdn.pixabay.com/photo/2016/11/01/18/41/alien-1789184__340.png",
+        "https://cdn.pixabay.com/photo/2020/01/30/08/00/caricature-4804615__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/03/29/12/52/bear-2185131__340.png",
+        "https://cdn.pixabay.com/photo/2018/02/02/00/32/robot-3124412__340.jpg",
+        "https://cdn.pixabay.com/photo/2017/09/14/11/36/doctor-2748707__340.png",
+        "https://cdn.pixabay.com/photo/2017/03/19/00/48/dog-2155329__340.png",
+        "https://cdn.pixabay.com/photo/2018/02/12/22/19/ice-cream-3149270__340.jpg",
+        "https://cdn.pixabay.com/photo/2018/03/12/00/13/caricature-3218433__340.png",
+        "https://cdn.pixabay.com/photo/2018/02/27/13/27/bima-3185441__340.png",
+        "https://cdn.pixabay.com/photo/2020/01/30/07/57/caricature-4804606__340.jpg",
+        "https://cdn.pixabay.com/photo/2019/07/15/01/15/fish-4338388__340.png",
+        "https://cdn.pixabay.com/photo/2019/07/15/01/15/fish-4338388__340.png",
+        "https://cdn.pixabay.com/photo/2015/08/02/23/32/african-872377__340.png",
+        "https://cdn.pixabay.com/photo/2020/01/30/07/58/caricature-4804608__340.jpg",
+        "https://cdn.pixabay.com/photo/2018/08/23/23/15/einstein-3626977__340.png",
+        "https://cdn.pixabay.com/photo/2016/03/31/20/40/annoying-1295960__340.png",
+      ];
 
       switch (this.categoria) {
         case "animales":
@@ -249,6 +325,12 @@ export default {
           break;
         case "musica":
           this.imagenes = this.musica;
+          break;
+        case "logos":
+          this.imagenes = this.logos;
+          break;
+        case "dibujos":
+          this.imagenes = this.dibujos;
           break;
       }
       this.tiempo();
