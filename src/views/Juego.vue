@@ -415,7 +415,7 @@ export default {
       );
     },
 
-    //juego en pausas
+    //juego en pausa intermediarios 
     pause() {
       clearInterval(cronometro);
       swal({
@@ -423,14 +423,14 @@ export default {
         icon:
           "https://pauseonline.s3.eu-west-2.amazonaws.com/wp-content/uploads/2019/11/01131317/Pause-Logo.png",
 
-        text: "ACIERTOS: " + this.aciertos,
+        text: "ACIERTOS: "+"[ " + this.aciertos + " ]",
 
         buttons: {
           reanudar: {
             text: "REANUDAR",
           },
           home: {
-            text: "SALIR",
+            text: "INICIO ",
           },
         },
         closeOnClickOutside: false,
@@ -452,14 +452,14 @@ export default {
       clearInterval(cronometro);
       swal({
         icon: "https://www.flaticon.es/svg/static/icons/svg/1986/1986987.svg",
-        title: "Intentos: " + this.intentos,
-        text: "Tiempo  " + this.min + ":" + this.seg,
+        title: "INTENTOS FALLIDOS: "+"[ " + this.intentos +" ]",
+        text: "TIEMPO:  " + this.min + ":" + this.seg,
         buttons: {
           reiniciar: {
-            text: "Reiniciar",
+            text: "REINICIAR",
           },
           home: {
-            text: "Salir",
+            text: "INICIO ",
           },
         },
         closeOnClickOutside: false,
