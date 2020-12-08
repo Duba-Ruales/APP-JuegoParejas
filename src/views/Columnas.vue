@@ -1,9 +1,9 @@
 <template>
-  <div class="categorias padre fondo1">
-    <div class="bloque">
-      <div class="bloques">
+  <div class="categorias principal fondo1">
+    <div class="cuadro">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo2"
+          class="botton1 botton-categorias fondo2"
           type="submit"
           v-on:click="(ancho = 2), (alto = 3)"
           @click="siguiente()"
@@ -18,9 +18,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo2"
+          class="botton1 botton-categorias fondo2"
           type="submit"
           v-on:click="(ancho = 3), (alto = 4)"
           @click="siguiente()"
@@ -35,9 +35,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo2"
+          class="botton1 botton-categorias fondo2"
           type="submit"
           v-on:click="(ancho = 4), (alto = 5)"
           @click="siguiente()"
@@ -52,9 +52,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo2"
+          class="botton1 botton-categorias fondo2"
           type="submit"
           v-on:click="(ancho = 5), (alto = 6)"
           @click="siguiente()"
@@ -69,9 +69,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo2"
+          class="botton1 botton-categorias fondo2"
           type="submit"
           v-on:click="(ancho = 7), (alto = 8)"
           @click="siguiente()"
@@ -86,9 +86,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo2"
+          class="botton1 botton-categorias fondo2"
           type="submit"
           v-on:click="(ancho = 8), (alto = 9)"
           @click="siguiente()"
@@ -126,7 +126,7 @@ export default {
     siguiente() {
       localStorage.setItem("alto", this.alto);
       localStorage.setItem("ancho", this.ancho);
-      this.$router.push("/Juego");
+      this.$router.push("/Memora");
     },
   },
 };

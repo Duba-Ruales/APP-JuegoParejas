@@ -1,9 +1,9 @@
 <template>
-  <div class="categorias padre fondo2">
-    <div class="bloque">
-      <div class="bloques">
+  <div class="categorias principal fondo2">
+    <div class="cuadro">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo1"
+          class="botton1 botton-categorias fondo1"
           type="submit"
           v-on:click="cat = 'animales'"
           @click="siguiente()"
@@ -18,9 +18,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo1"
+          class="botton1 botton-categorias fondo1"
           type="submit"
           v-on:click="cat = 'frutas'"
           @click="siguiente()"
@@ -35,9 +35,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo1"
+          class="botton1 botton-categorias fondo1"
           type="submit"
           v-on:click="cat = 'musica'"
           @click="siguiente()"
@@ -52,9 +52,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo1"
+          class="botton1 botton-categorias fondo1"
           type="submit"
           v-on:click="cat = 'vehiculos'"
           @click="siguiente()"
@@ -69,9 +69,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo1"
+          class="botton1 botton-categorias fondo1"
           type="submit"
           v-on:click="cat = 'logos'"
           @click="siguiente()"
@@ -86,9 +86,9 @@
         </button>
       </div>
 
-      <div class="bloques">
+      <div class="cuadro-hijo">
         <button
-          class="bttn bttn-cat fondo1"
+          class="botton1 botton-categorias fondo1"
           type="submit"
           v-on:click="cat = 'dibujos'"
           @click="siguiente()"
@@ -120,7 +120,7 @@ export default {
   methods: {
     siguiente() {
       localStorage.setItem("categoria", this.cat);
-      this.$router.push("/Cuadriculas");
+      this.$router.push("/Columnas");
     },
   },
 };

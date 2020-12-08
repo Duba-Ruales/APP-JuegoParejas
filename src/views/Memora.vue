@@ -1,32 +1,39 @@
 <template>
-  <div class="bttn2 padre fondo1">
-    <div class="prueba fondo2">
-      <div class="col-12">
-        <h2 class="text-context">MEMORY MATCH</h2>
-        <p>
-          <button class="btton-pause" @click="pause()">
-            <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
-          </button>
-
-          <span class="h5"> Intentos: </span>{{ intentos }}
-          <span class="h5">Aciertos: </span>{{ aciertos }}
-          <span class="h5">Tiempo: </span><span id="minutos"></span> :
-          <span id="segundos"></span>
-        </p>
+  <div class="header fondo1">
+    <div class="header-body row sinpadding mb-1 fondo2">
+      <div class="col">
+        <h2 class="text-context text-white">{{ categoria }}</h2>
+        <button class="btton-pause" @click="pause()">
+          <img class="img-btn" src="../assets/fondo/pause.png" alt="Pause" />
+        </button>
+        <div class="flex-items">
+          <div class="h5 text-white">Intentos: {{ intentos }}</div>
+          <div class="h5 text-white">Aciertos: {{ aciertos }}</div>
+          <div>
+            <span class="h5 text-white">Tiempo: </span>
+            <span class="h5 text-white" id="minutos"></span>
+            <b class="text-white"> : </b>
+            <span class="h5 text-white" id="segundos"></span>
+          </div>
+        </div>
       </div>
     </div>
-    <div v-for="(fila, indiceFila) in memorama" :key="indiceFila" class="row">
+    <div
+      v-for="(fila, indiceFila) in memorama"
+      :key="indiceFila"
+      class="row sinpadding"
+    >
       <div
         :key="indiceFila + '' + indiceImagen"
-        class="col"
+        class="col imagen-print"
         v-for="(imagen, indiceImagen) in fila"
       >
-        <div class="mb-1 prueba">
+        <div class="mb-1">
           <img
             @click="voltear(indiceFila, indiceImagen)"
             :class="{ girar: imagen.mostrar }"
             :src="imagen.mostrar ? imagen.ruta : NOMBRE_IMAGEN_OCULTA"
-            class="target-image"
+            class="target-image card-img-top img-fluid"
           />
         </div>
       </div>
@@ -38,7 +45,6 @@
 import swal from "sweetalert";
 import React from "react";
 var cronometro;
-var ganador = "¡ FELICIDADES !";
 export default {
   name: "Juego",
   data() {
@@ -241,9 +247,9 @@ export default {
         "https://cdn.pixabay.com/photo/2016/11/09/08/58/wordpress-1810632__340.jpg",
         "https://cdn.pixabay.com/photo/2013/07/13/11/34/wifi-158401__340.png",
         "https://cdn.pixabay.com/photo/2016/04/24/14/34/youtube-1349699__340.png",
-        "https://cdn.pixabay.com/photo/2015/04/08/04/41/the-chinese-dragon-712149_",
+        "https://cdn.pixabay.com/photo/2016/11/09/10/42/facebook-1811267_960_720.jpg",
         "https://cdn.pixabay.com/photo/2014/04/03/00/43/lion-309219__340.png",
-        " https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309__340.png",
+        "https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309__340.png",
         "https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg",
         "https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908__340.png",
         "https://cdn.pixabay.com/photo/2016/01/26/17/15/gmail-1162901__340.png",
@@ -259,9 +265,9 @@ export default {
         "https://cdn.pixabay.com/photo/2016/11/09/08/58/wordpress-1810632__340.jpg",
         "https://cdn.pixabay.com/photo/2013/07/13/11/34/wifi-158401__340.png",
         "https://cdn.pixabay.com/photo/2016/04/24/14/34/youtube-1349699__340.png",
-        "https://cdn.pixabay.com/photo/2015/04/08/04/41/the-chinese-dragon-712149_",
+        "https://cdn.pixabay.com/photo/2016/11/09/10/42/facebook-1811267_960_720.jpg_",
         "https://cdn.pixabay.com/photo/2014/04/03/00/43/lion-309219__340.png",
-        " https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309__340.png",
+        "https://cdn.pixabay.com/photo/2014/04/02/10/16/fire-303309__340.png",
         "https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266__340.jpg",
         "https://cdn.pixabay.com/photo/2016/04/13/14/27/google-chrome-1326908__340.png",
         "https://cdn.pixabay.com/photo/2016/01/26/17/15/gmail-1162901__340.png",
@@ -532,8 +538,10 @@ export default {
     // Mostrar alerta de victoria y reiniciar juego
     indicarVictoria() {
       clearInterval(cronometro);
+
       swal({
-        icon: "https://www.flaticon.es/svg/static/icons/svg/1986/1986987.svg",
+        icon:
+          "https://runfrictionless.com/wp-content/uploads/2018/10/trophy-200px.gif",
         title: "INTENTOS FALLIDOS: " + "[ " + this.intentos + " ]",
         text: "TIEMPO:  " + this.min + ":" + this.seg,
         buttons: {
@@ -572,3 +580,81 @@ export default {
   },
 };
 </script>
+<style>
+.header {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100px auto;
+}
+.sinpadding {
+  margin: 0;
+  padding: 0;
+}
+.col {
+  width: 99%;
+  height: 99%;
+  margin: auto;
+  position: relative;
+}
+.target-image {
+  width: 99%;
+  position: relative;
+  height: calc(100% - 100px);
+}
+.imagen-print img {
+  position: absolute;
+  height: 99%;
+  width: 99%;
+  top: 0px;
+  left: 0px;
+  padding: 0px 2px;
+}
+.header-body {
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: auto;
+}
+.flex-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+.swal-modal {
+  background-color: rgb(76, 215, 250);
+  border: 3px solid rgb(255, 255, 255);
+}
+.swal-title {
+  margin: 0px;
+  font-size: 18px;
+  margin-bottom: 28px;
+  color: #000;
+  text-transform: uppercase;
+}
+.swal-icon {
+  height: 40%;
+  width: 40%;
+}
+.swal-text {
+  color: black;
+}
+.swal-footer {
+  background-color: rgb(76, 215, 250);
+  overflow: hidden;
+  text-align: center;
+  border-top: none;
+}
+.swal-button {
+  padding: 10px 19px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+}
+.swal-button--reiniciar {
+  background-color: #c0be4f;
+}
+.swal-button--home {
+  background-color: #c0be4f;
+}
+</style>
