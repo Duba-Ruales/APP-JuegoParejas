@@ -280,6 +280,7 @@ export default {
           self.guardartiempo();
         }, 1000));
     },
+
     guardartiempo() {
       if (this.seg === 60) {
         this.seg = 0;
