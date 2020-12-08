@@ -507,7 +507,7 @@ export default {
     pause() {
       clearInterval(cronometro);
       swal({
-        ganador,
+        
         icon:
           "https://pauseonline.s3.eu-west-2.amazonaws.com/wp-content/uploads/2019/11/01131317/Pause-Logo.png",
 
@@ -647,14 +647,14 @@ export default {
 .swal-button {
   padding: 10px 19px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 .swal-button--reiniciar {
-  background-color: #c0be4f;
+  background-color: #d8d518;
 }
 .swal-button--home {
-  background-color: #c0be4f;
+  background-color: #d8d518;
 }
 </style>
