@@ -260,7 +260,7 @@ export default {
       var self = this;
       let st = this.seg;
       let mt = this.min;
-      let ht = 0;
+      let ht = this.horas;
       let segundo = document.getElementById("segundos");
       let minuto = document.getElementById("minutos");
       (minuto.innerHTML = mt),
@@ -269,7 +269,7 @@ export default {
           if (st === 60) {
             mt++;
             st = 0;
-            MSInputMethodContext.innerHTML = mt;
+            minuto.innerHTML = mt;
             if (mt === 60) {
               mt = 0;
               ht++;
@@ -415,7 +415,7 @@ export default {
       );
     },
 
-    //juego en pausa intermediarios 
+    //juego en pausa intermediarios
     pause() {
       clearInterval(cronometro);
       swal({
@@ -423,7 +423,7 @@ export default {
         icon:
           "https://pauseonline.s3.eu-west-2.amazonaws.com/wp-content/uploads/2019/11/01131317/Pause-Logo.png",
 
-        text: "ACIERTOS: "+"[ " + this.aciertos + " ]",
+        text: "ACIERTOS: " + "[ " + this.aciertos + " ]",
 
         buttons: {
           reanudar: {
@@ -452,7 +452,7 @@ export default {
       clearInterval(cronometro);
       swal({
         icon: "https://www.flaticon.es/svg/static/icons/svg/1986/1986987.svg",
-        title: "INTENTOS FALLIDOS: "+"[ " + this.intentos +" ]",
+        title: "INTENTOS FALLIDOS: " + "[ " + this.intentos + " ]",
         text: "TIEMPO:  " + this.min + ":" + this.seg,
         buttons: {
           reiniciar: {
